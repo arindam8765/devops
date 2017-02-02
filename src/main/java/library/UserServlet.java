@@ -3,6 +3,7 @@ package library;
 import java.io.*;
 import java.net.*;
 import java.sql.*;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 
@@ -19,8 +20,8 @@ public class UserServlet extends HttpServlet
         String name=username;  
         try
         {
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            Connection con=DriverManager.getConnection("jdbc:odbc:library");
+        	Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt1=con.createStatement();
             String sql1="select Username,Password from MemberDetails where Username='"+username+"'and Password='"+password+"'";
             ResultSet rs1=stmt1.executeQuery(sql1);

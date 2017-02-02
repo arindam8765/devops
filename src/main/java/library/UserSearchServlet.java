@@ -19,8 +19,8 @@ public class UserSearchServlet extends HttpServlet
         out.println(value);
         try
         {
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            Connection con=DriverManager.getConnection("jdbc:odbc:library");
+        	Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
             if(category.equals("BookTitle"))

@@ -2,6 +2,7 @@ package library;
 
 import java.io.*;
 import java.sql.*;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.lang.String.*;
@@ -20,16 +21,19 @@ public class SignupServlet extends HttpServlet
         String address=request.getParameter("address");
         String username=request.getParameter("username");
         String password=request.getParameter("password");
+        System.out.println(fullname+address+username+password);
         HttpSession session=request.getSession();
         String name=username; 
         try
         {
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            Connection con=DriverManager.getConnection("jdbc:odbc:library");
+        	Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt=con.createStatement();
-           String m1="select max(MemberID) from MemberDetails";
+            String m1="select max(MemberID) from memberdetails";
+            System.out.println(m1);
             ResultSet rs=stmt.executeQuery(m1);
             String id=rs.getString("MemberID");
+            System.out.println(id);
             int j=Integer.parseInt(id);
             int k=j+1;
             String m2=String.valueOf(k);

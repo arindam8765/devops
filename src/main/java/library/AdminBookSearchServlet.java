@@ -18,8 +18,8 @@ public class AdminBookSearchServlet extends HttpServlet
         String BookTitle = request.getParameter("BookTitle");
         try
         {
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            Connection con=DriverManager.getConnection("jdbc:odbc:library");
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
             String sql1="select * from Books where BookTitle='"+BookTitle+"'";

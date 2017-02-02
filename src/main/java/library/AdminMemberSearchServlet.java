@@ -18,8 +18,8 @@ public class AdminMemberSearchServlet extends HttpServlet
         String MemberID = request.getParameter("MemberID");
         try
         {
-            Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            Connection con=DriverManager.getConnection("jdbc:odbc:library");
+        	Class.forName("com.mysql.jdbc.Driver");
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
             String sql1="select m.MemberID,m.Fullname,m.Username,m.Password,c.BookId,c.BookTitle,c.DateBorrowed from MemberDetails m,Checkout c where m.MemberID='"+MemberID+"'and m.MemberID=c.MemberID";
