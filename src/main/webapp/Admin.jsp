@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>AdminLogin Page</title>
+        <title>Admin Login Page</title>
     </head>
    <body>
    <table width=100% align=center cellspacing="0" cellpadding="0" bgcolor=#C3D9FF>
