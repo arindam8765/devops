@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Login Page 1</title>
+        <title>Admin Login Page New</title>
     </head>
    <body>
    <table width=100% align=center cellspacing="0" cellpadding="0" bgcolor=#C3D9FF>
@@ -43,7 +43,7 @@
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
                   <td>
-                      AdminName:
+                      AdminName 1:
                   </td>
                   <td>
                       <input type="text" name="username">
