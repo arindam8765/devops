@@ -26,7 +26,7 @@
       </tr>    
       <tr>
           <td>
-              <font size="+0"><center><b>Account </b></center></font>
+              <font size="+0"><center><b>Account</b></center></font>
           </td>
       </tr>
   </table>
