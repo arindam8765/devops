@@ -26,7 +26,7 @@
       </tr>    
       <tr>
           <td>
-              <font size="+0"><center><b>Vault</b></center></font>
+              <font size="+0"><center><b>Credential</b></center></font>
           </td>
       </tr>
   </table>
@@ -43,7 +43,7 @@
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
                   <td>
-                      UserID :
+                      Username :
                   </td>
                   <td>
                       <input type="text" name="username">
