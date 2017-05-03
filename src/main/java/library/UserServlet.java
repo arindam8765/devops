@@ -21,7 +21,10 @@ public class UserServlet extends HttpServlet
         try
         {
         	Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
+            String userName = "root";
+            String pwd = "password";
+            String url = "jdbc:mysql://localhost:3306/devops?autoReconnect=true&useSSL=false";
+            Connection con=DriverManager.getConnection(url,userName,pwd);
             Statement stmt1=con.createStatement();
             String sql1="select Username,Password from MemberDetails where Username='"+username+"'and Password='"+password+"'";
             ResultSet rs1=stmt1.executeQuery(sql1);

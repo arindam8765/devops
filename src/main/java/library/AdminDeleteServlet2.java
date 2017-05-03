@@ -17,10 +17,13 @@ public class AdminDeleteServlet2 extends HttpServlet {
         try
         {
         	Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
+            String userName = "root";
+            String pwd = "password";
+            String url = "jdbc:mysql://localhost:3306/devops?autoReconnect=true&useSSL=false";
+            Connection con=DriverManager.getConnection(url,userName,pwd);
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
-            String sql1="select * from MemberDetails where MemberID='"+memberid+"'"; 
+            String sql1="Delete from MemberDetails where MemberID='"+memberid+"'"; 
             ResultSet rs1=stmt.executeQuery(sql1);
                 
             if(rs1.next())

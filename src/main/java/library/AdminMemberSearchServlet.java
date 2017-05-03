@@ -19,10 +19,13 @@ public class AdminMemberSearchServlet extends HttpServlet
         try
         {
         	Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
+            String userName = "root";
+            String pwd = "password";
+            String url = "jdbc:mysql://localhost:3306/devops?autoReconnect=true&useSSL=false";
+            Connection con=DriverManager.getConnection(url,userName,pwd);
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
-            String sql1="select m.MemberID,m.Fullname,m.Username,m.Password,c.BookId,c.BookTitle,c.DateBorrowed from MemberDetails m,Checkout c where m.MemberID='"+MemberID+"'and m.MemberID=c.MemberID";
+            String sql1="select m.MemberID,m.Fullname,m.Username,m.Password,c.BookId,c.BookTitle,c.DateBorrow from MemberDetails m,Checkout c where m.MemberID='"+MemberID+"'and m.MemberID=c.MemberID";
             ResultSet rs1=stmt.executeQuery(sql1);
                 
               if(rs1.next())

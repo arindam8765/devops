@@ -19,7 +19,10 @@ public class AdminEditServlet extends HttpServlet {
         try
         {
         	Class.forName("com.mysql.jdbc.Driver");
-            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
+            String userName = "root";
+            String pwd = "password";
+            String url = "jdbc:mysql://localhost:3306/devops?autoReconnect=true&useSSL=false";
+            Connection con=DriverManager.getConnection(url,userName,pwd);
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
            
