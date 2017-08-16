@@ -20,15 +20,12 @@ public class UserSearchServlet extends HttpServlet
         try
         {
         	Class.forName("com.mysql.jdbc.Driver");
-            String userName = "root";
-            String pwd = "password";
-            String url = "jdbc:mysql://localhost:3306/devops?autoReconnect=true&useSSL=false";
-            Connection con=DriverManager.getConnection(url,userName,pwd);
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt=con.createStatement();
             ArrayList arr=new ArrayList();
             if(category.equals("BookTitle"))
             {
-                String sql1="select * from Books where BookTitle like '%"+value+"%'";
+                String sql1="select * from Books where BookTitle like '%"+value+"'";
                 ResultSet rs1=stmt.executeQuery(sql1);
                 
                 if(rs1.next())
@@ -49,7 +46,7 @@ public class UserSearchServlet extends HttpServlet
                 
             if(category.equals("Author"))
             {
-                String sql2="select * from Books where Author like '%"+value+"%'";
+                String sql2="select * from Books where Author like '%"+value+"'";
                 ResultSet rs2=stmt.executeQuery(sql2);
                 
                 if(rs2.next())
@@ -70,7 +67,7 @@ public class UserSearchServlet extends HttpServlet
         
             if(category.equals("Subject"))
             {
-                String sql3="select * from Books where Subject like '%"+value+"%'";
+                String sql3="select * from Books where Subject like '%"+value+"'";
                 ResultSet rs3=stmt.executeQuery(sql3);
                
                 if(rs3.next())

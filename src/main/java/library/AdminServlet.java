@@ -9,24 +9,19 @@ import javax.servlet.http.*;
 
 public class AdminServlet extends HttpServlet 
 {
-    
-	public void doGet(HttpServletRequest request, HttpServletResponse response)
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
     {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         String username=request.getParameter("username");
         String password=request.getParameter("password");
-        
         HttpSession session=request.getSession();
         String name=username;
         try
         {
         	Class.forName("com.mysql.jdbc.Driver");
-            String userName = "root";
-            String pwd = "password";
-            String url = "jdbc:mysql://localhost:3306/devops?autoReconnect=true&useSSL=false";
-            Connection con=DriverManager.getConnection(url,userName,pwd);
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/devops?user=root&password=password");
             Statement stmt1=con.createStatement();
             String sql1="select AdminName,Password from AdminDetails where AdminName='"+username+"'and Password='"+password+"'";
             ResultSet rs1=stmt1.executeQuery(sql1);
@@ -54,7 +49,7 @@ public class AdminServlet extends HttpServlet
              {
                  String s1="Login failed";
                  request.getRequestDispatcher("/Admin.jsp?method='"+s1+"'").forward(request,response);
-                 //session.invalidate();
+                 session.invalidate();
                  rs1.close();
                  stmt1.close();
                  con.close();
