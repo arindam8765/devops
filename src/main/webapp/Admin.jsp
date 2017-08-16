@@ -43,7 +43,7 @@
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
                   <td>
-                      AdminName:
+                      Admin Name:
                   </td>
                   <td>
                       <input type="text" name="username">
