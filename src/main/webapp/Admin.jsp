@@ -42,12 +42,7 @@
       <p align="center">
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
-                  <td>
-<<<<<<< HEAD
-                      Admin Name:
-=======
-                      Username :
->>>>>>> parent of 7ea6ce1... test03052017
+                  <td>Username :
                   </td>
                   <td>
                       <input type="text" name="username">
