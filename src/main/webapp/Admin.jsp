@@ -42,7 +42,7 @@
       <p align="center">
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
-                  <td> Enter Login Name :
+                  <td> Login Name :
                   </td>
                   <td>
                       <input type="text" name="username">
@@ -50,7 +50,7 @@
               </tr>
               <tr>
                   <td>
-                      Enter Password:
+                      Password:
                   </td>
                   <td>
                       <input type="password" name="password">
