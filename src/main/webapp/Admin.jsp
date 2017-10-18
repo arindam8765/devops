@@ -42,7 +42,7 @@
       <p align="center">
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
-                  <td> Username :
+                  <td> Username:
                   </td>
                   <td>
                       <input type="text" name="username">
