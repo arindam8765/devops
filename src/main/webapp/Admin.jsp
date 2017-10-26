@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Admin Login Page New</title>
+        <title>Login Page</title>
     </head>
    <body>
    <table width=100% align=center cellspacing="0" cellpadding="0" bgcolor=#C3D9FF>
@@ -42,16 +42,13 @@
       <p align="center">
           <table bgcolor="#e8eefa" cellpadding="5">
               <tr>
-                  <td> Username:
-                  </td>
+                  <td>UserID:</td>
                   <td>
                       <input type="text" name="username">
                   </td>
               </tr>
               <tr>
-                  <td>
-                      Password:
-                  </td>
+                  <td>Password:</td>
                   <td>
                       <input type="password" name="password">
                   </td>
