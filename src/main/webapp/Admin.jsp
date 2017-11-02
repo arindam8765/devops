@@ -6,8 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login Page</title>
     </head>
-   <!-- <body>    -->
-   <body bgcolor=#bdc3c7>
+   <body>
+   <!-- <body bgcolor=#bdc3c7>    -->
    <table width=100% align=center cellspacing="0" cellpadding="0" bgcolor=#C3D9FF>
       <tr>
           <br>
@@ -17,7 +17,7 @@
       </tr>
   </table>
  <br>
- <marquee>This is a updated page</marquee>
+ <!-- marquee>This is a updated page</marquee> -->
   <p align="center">
   <table>
       <tr>
@@ -41,8 +41,8 @@
       <%} %>
   <form action="AdminServlet" method="Get">
       <p align="center">
-          <!-- table bgcolor="#e8eefa" cellpadding="5"> -->
-          <table bgcolor="#d35400" cellpadding="5">
+          <table bgcolor="#e8eefa" cellpadding="5">
+          <!-- table bgcolor="#d35400" cellpadding="5"> -->
               <tr>
                   <td>Username:</td>
                   <td>
