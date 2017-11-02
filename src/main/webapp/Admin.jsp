@@ -6,15 +6,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login Page</title>
     </head>
-   <body>
+   <body>   
+   <!-- <body bgcolor=#bdc3c7> -->
    <table width=100% align=center cellspacing="0" cellpadding="0" bgcolor=#C3D9FF>
       <tr>
           <br>
-          <td style="font-family:arial;text-align:left;font-weight:bold;padding:5 0"><center>Administrators' section</center>
+          <td style="font-family:arial;text-align:left;font-weight:bold;padding:5 0">
+          	<center>Administrators' section</center>
           </td>
       </tr>
   </table>
  <br>
+ <!-- marquee>This is a updated page</marquee> -->
   <p align="center">
   <table>
       <tr>
@@ -32,17 +35,16 @@
   </table>
   </p>
       
-      <% if(request.getParameter("method")!=null){
-         
-         
+      <% if(request.getParameter("method")!=null){ 
       %>
  <center><%=request.getParameter("method")%></center>
       <%} %>
   <form action="AdminServlet" method="Get">
       <p align="center">
           <table bgcolor="#e8eefa" cellpadding="5">
+          <!-- table bgcolor="#d35400" cellpadding="5"> -->
               <tr>
-                  <td>UserID:</td>
+                  <td>Username:</td>
                   <td>
                       <input type="text" name="username">
                   </td>
