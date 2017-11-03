@@ -6,8 +6,8 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login Page</title>
     </head>
-   <body>
-   <!-- <body bgcolor=#bdc3c7>    -->
+   <!-- <body>    -->
+   <body bgcolor=#bdc3c7>
    <table width=100% align=center cellspacing="0" cellpadding="0" bgcolor=#C3D9FF>
       <tr>
           <br>
@@ -17,7 +17,7 @@
       </tr>
   </table>
  <br>
- <!-- marquee>This is the updated page</marquee>  -->
+ <marquee>This is the updated page</marquee>
   <p align="center">
   <table>
       <tr>
