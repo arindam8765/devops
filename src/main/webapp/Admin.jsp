@@ -17,7 +17,7 @@
       </tr>
   </table>
  <br>
- <marquee>This is the updated page</marquee>
+ <marquee>This is the updated page - 11/20/2017</marquee>
   <p align="center">
   <table>
       <tr>
@@ -44,7 +44,7 @@
           <table bgcolor="#e8eefa" cellpadding="5">
           <!-- table bgcolor="#d35400" cellpadding="5"> -->
               <tr>
-                  <td>Username:</td>
+                  <td>User ID:</td>
                   <td>
                       <input type="text" name="username">
                   </td>
