@@ -17,7 +17,7 @@
       </tr>
   </table>
  <br>
- <marquee>This is the updated page - 11/22/2017</marquee>
+ <!--  <marquee>This is the updated page - 11/22/2017</marquee> --> 
   <p align="center">
   <table>
       <tr>
